@@ -1,0 +1,108 @@
+a {
+    color: #000;
+}
+
+#menu {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.tile {
+    background-color: #000000;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.element {
+    position: relative;
+    width: 120px;
+    height: 160px;
+    box-shadow: 0px 0px 12px #000;
+    border: 1px solid rgba(127,255,255,0.25);
+    font-family: Helvetica, sans-serif;
+    text-align: center;
+    line-height: normal;
+    cursor: default;
+    overflow: hidden;
+    background: transparent;
+}
+
+.element:hover {
+    box-shadow: 0px 0px 12px #333;
+    border: 1px solid #000;
+}
+
+.age {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #333;
+}
+
+.country {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #333;
+}
+
+.photo-container {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 8px;
+    margin: 0 auto;
+    margin-top: 17px;
+}
+
+.photo-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.name {
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 100%;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.details {
+    font-size: 12px;
+    color: #000000;
+    margin-top: 3px;
+}
+
+.net-worth {
+    display: none;
+}
+
+button {
+    color: #000;
+    background: transparent;
+    outline: 1px solid #000;
+    border: 0px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgba(0,255,255,0.5);
+}
+
+button:active {
+    color: #000000;
+    background-color: rgba(0,255,255,0.75);
+}

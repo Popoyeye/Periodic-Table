@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D Periodic Table with Google Sheets API</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+  <meta http-equiv="Cross-Origin-Embedder-Policy" content="require-corp">
+</head>
+<body>
+    <div id="login-container">
+        <h1>Sign In With Google</h1>
+        <div id="g_id_onload"
+                data-client_id="569583041593-dpbepo3l48lg61s49ulpj7hrn5n2da8k.apps.googleusercontent.com"
+                data-callback="onSignIn">
+        </div>
+        <div class="g_id_signin" data-type="standard"></div>
+    </div>
+    <div id="container"></div>
+
+<script>
+    function onSignIn(response) {
+    console.log("Encoded JWT ID token: " + response.credential);
+
+    // Decode the JWT token (optional for development)
+    const payload = JSON.parse(atob(response.credential.split('.')[1]));
+    console.log("User Information: ", payload);
+
+    // Display the user info on the page (optional)
+    const userInfo = document.createElement("p");
+    userInfo.textContent = `Welcome, ${payload.name}! Your email: ${payload.email}`;
+    document.body.appendChild(userInfo);
+
+    // Redirect to another page
+    window.location.href = '/periodic/index.html';
+}
+</script>
+<script href="app.js"></script>
+</body>
+</html>
